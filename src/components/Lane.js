@@ -1,10 +1,11 @@
-import Paint from "./Paint";
+//import Paint from "./Paint";
+import PaintList from "./PaintList";
 
 const Lane = (props) => {
     const status = props.status;
-    const paint = props.paint;
+    const paints = props.paints;
 
-    function checkStatusAndDisplay(status){
+    function checkStatusAndDisplay(){
         if(status === "2"){
             return("Available")
         } else if(status === "1"){
@@ -16,14 +17,11 @@ const Lane = (props) => {
 
     return(
         <>
-        {
-            console.log("Lane paint:" + paint)
-        }
         <h2 className="ui horizontal divider header">
-            {checkStatusAndDisplay(status)}
+            {checkStatusAndDisplay()}
         </h2>
         <div className="ui cards">
-            <Paint paint={paint}></Paint>
+            <PaintList status={status} paints={paints}></PaintList>
         </div>
         </>
     );

@@ -1,38 +1,31 @@
 import Header from "./Header";
-import Paint from "./Paint";
+//import Paint from "./Paint";
+import React from "react";
+//import AddPaint from "./AddPaint";
+//import Lane from "./Lane";
+//import PaintList from "./PaintList";
+import KanbanBoard from "./KanbanBoard";
+
 
 const App = () => {
+  //Paint template
+  const paint1 = {key:"01", colour:"Blue", status:2};
+  const paint2 = {key:"02", colour:"Grey", status:1};
+  const paint3 = {key:"03", colour:"Black", status:2};
+  const paint4 = {key:"04", colour:"White", status:0};
+  const paint5 = {key:"05", colour:"Purple", status:0};
+
+  const paints = [paint1, paint2, paint3, paint4, paint5];
+
   return (
     <div className="App">
       <Header />
       <div className="ui container">
         
-        <h2 className="ui horizontal divider header"><i className="large plus icon"></i> Add New Paint</h2>
+        <KanbanBoard paints={paints} />
         
-        <h2 className="ui horizontal divider header"><i className="large tint icon"></i> Current Inventory</h2>
-
-        <div className="ui equal width center aligned padded grid">
-            <div className="ui column olive">
-              <div className="ui cards">
-                <Paint />
-              </div>
-            </div>            
-            <div className="ui column yellow">
-              <div className="ui cards">
-                <Paint />
-                <Paint />
-                <Paint />
-              </div>
-            </div>
-            <div className="ui column orange">
-              <div className="ui cards">
-                <Paint />
-              </div>
-            </div>
-        </div>
       </div>
     </div>
-
   );
 }
 
