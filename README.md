@@ -21,14 +21,11 @@ A Paint Company is a small painting company based out of British Columbia. They 
 
 ### Numbered Colours
 
-    Chose to add a key value for each paint colour being tracked. This was done to future-proof with the idea that there may be other colours in the future that can be handled by this app with some additional features. This can help eliminate human-error in being able to describe a specific paint, not just the colour as an additional verification factor. Lastly, if there are different batches in future of the same colour this will be able to be handled.
+Chose to add a key value for each paint colour being tracked. This was done to future-proof with the idea that there may be other colours in the future that can be handled by this app with some additional features. This can help eliminate human-error in being able to describe a specific paint, not just the colour as an additional verification factor. Lastly, if there are different batches in future of the same colour this will be able to be handled.
 
 ### Single Page View/Edit/Update
 
-    I made the decision to leave this as a single page app.
-
-    There are multiple users who need to access this app from varying devices (laptop, mobile) and who have different levels of computer skills.
-
-    This view is the most similar to the current process of "sticky notes on a white board", where anyone can change which swim lane each paint is in.
-
-    ReactJS allows seemless single-page updating with quick responsiveness for this app's features.
+I made the decision to leave this as a single page app.
+There are multiple users who need to access this app from varying devices (laptop, mobile) and who have different levels of computer skills.
+This view is the most similar to the current process of "sticky notes on a white board", where anyone can change which swim lane each paint is in.
+ReactJS allows seemless single-page updating with quick responsiveness for this app's features.
