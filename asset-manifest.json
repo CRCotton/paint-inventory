@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/paint-inventory/static/css/main.e6c13ad2.css",
+    "main.js": "/paint-inventory/static/js/main.80845063.js",
+    "static/js/787.6c5b119a.chunk.js": "/paint-inventory/static/js/787.6c5b119a.chunk.js",
+    "index.html": "/paint-inventory/index.html",
+    "main.e6c13ad2.css.map": "/paint-inventory/static/css/main.e6c13ad2.css.map",
+    "main.80845063.js.map": "/paint-inventory/static/js/main.80845063.js.map",
+    "787.6c5b119a.chunk.js.map": "/paint-inventory/static/js/787.6c5b119a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.80845063.js"
+  ]
+}
