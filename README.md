@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Stock Status Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with ReactJS and Semantic-UI.
 
-## Available Scripts
+Paint Inventory was designed for a mock house painting company called "A Paint Company".
 
-In the project directory, you can run:
+It provides a kanban-style view of available paint colours to mimic the company's "Kanban style" paint chart using sticky notes on a white board.
 
-### `npm start`
+## About "A Paint Company"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A Paint Company is a small painting company based out of British Columbia. They were recently hired to paint the exterior of houses for a remote community. The houses can only be one of 5 different colours: blue, grey, black, white, or purple. There are two managers (John and Jane) who manage stock of paints as well as several painters.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Assumptions
 
-### `npm test`
+- Will only require the five different colours of paint
+- Only one 'sticky note' per colour
+- Internal facing app only
+- All users have permission to edit/view paint amounts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Decisions
 
-### `npm run build`
+### Numbered Colours
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Chose to add a key value for each paint colour being tracked. This was done to future-proof with the idea that there may be other colours in the future that can be handled by this app with some additional features. This can help eliminate human-error in being able to describe a specific paint, not just the colour as an additional verification factor. Lastly, if there are different batches in future of the same colour this will be able to be handled.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Single Page View/Edit/Update
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    I made the decision to leave this as a single page app.
 
-### `npm run eject`
+    There are multiple users who need to access this app from varying devices (laptop, mobile) and who have different levels of computer skills.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    This view is the most similar to the current process of "sticky notes on a white board", where anyone can change which swim lane each paint is in.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    ReactJS allows seemless single-page updating with quick responsiveness for this app's features.
