@@ -1,7 +1,6 @@
 import Header from "./Header";
 import React, {useState} from "react";
 import KanbanBoard from "./KanbanBoard";
-import EditPaint from "./EditPaint";
 
 
 const App = () => {
