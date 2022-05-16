@@ -41,10 +41,10 @@ const EditPaint = ({paints, onAdd, onSubtract}) => {
                     <div className="content">
                         <div className="header" style={{marginBottom: 15, marginTop: 5}}><h3>{paint.colour}</h3></div>
                         <div className="description">{displayAvailiability(paint.status)}
-                        <div className="ui buttons middle aligned right floated">
-                            <button className="ui button" onClick={() => onAdd(paint.key)}>Add Paint</button>
+                        <div className="ui buttons middle aligned">
+                            <button className="tiny ui button" onClick={() => onAdd(paint.key)}>Add Paint</button>
                             <div className="or"></div>
-                            <button className="ui button" onClick={() => onSubtract(paint.key)}>Use Paint</button>
+                            <button className="tiny ui button" onClick={() => onSubtract(paint.key)}>Use Paint</button>
                         </div>
                         </div>
                     </div>

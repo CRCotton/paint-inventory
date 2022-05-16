@@ -33,7 +33,6 @@ const App = () => {
     temp_state[key] = temp_paint;
 
     setPaints(temp_state);
-    console.log(paints.map((paint) =>({paint})))
   }
 
   //Adjust the paint to lower availability and checks to ensure it does not change outside of status bounds
@@ -51,7 +50,6 @@ const App = () => {
     temp_state[key] = temp_paint;
 
     setPaints(temp_state);
-    console.log(paints.map((paint) =>({paint})))
     }
   
 
@@ -61,9 +59,6 @@ const App = () => {
       <Header />
       <div className="ui container">
         <KanbanBoard paints={paints} onAdd={addPaint} onSubtract={usePaint} />
-        {
-          //<EditPaint paints={paints} onAdd={addPaint} onSubtract={usePaint}/>
-        }
       </div>
     </div>
   );

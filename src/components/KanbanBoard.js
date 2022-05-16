@@ -3,7 +3,7 @@ import PaintList from "./PaintList";
 
 const KanbanBoard = ({paints, onAdd, onSubtract}) => {
 
-    // Filter lists based on swim lanes of availability
+    // Filter lists based on swim lanes of availability for ease of reading
     const availablePaints = paints.filter(item => (item.status === 2));
     const lowPaints = paints.filter(item => (item.status === 1));
     const outPaints = paints.filter(item => (item.status === 0));
@@ -13,7 +13,7 @@ const KanbanBoard = ({paints, onAdd, onSubtract}) => {
         <div className="ui container">
             <h2 className="ui horizontal divider header"><i className="large tint icon"></i> Current Inventory</h2>
 
-            <div className="ui equal width center aligned padded grid">
+            <div className="ui three column center aligned divided grid">
                 <div className="ui column olive">
                     <h2 className="ui horizontal divider header">Available</h2>
                     <div className="ui cards">
