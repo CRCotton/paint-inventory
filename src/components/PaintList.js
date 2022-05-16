@@ -3,22 +3,18 @@ import Paint from "./Paint";
 
 
 
-const PaintCardList = (props) =>{
+const PaintCardList = ({paints, onAdd, onSubtract}) =>{
     
-    //const status = props.status;
-    const paints = props.paints;
 
-    const renderPaintCardList = paints.map((paint) => {
-        return (
-            /* need to provide options to show based on availability status */
-                <Paint paint={paint}></Paint>
-        )
-    })
+
 
     return (
-        <>
-        {renderPaintCardList}
-        </>)
+        paints.map((paint) => 
+            <div className="ui card" key={paint.key}>
+                <Paint paint={paint} onAdd={onAdd} onSubtract={onSubtract}/>
+            </div>
+        )
+    )
         
 };
 

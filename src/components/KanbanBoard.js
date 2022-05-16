@@ -1,11 +1,13 @@
-import Lane from "./Lane";
+import React from "react";
+import PaintList from "./PaintList";
 
-const KanbanBoard = (props) => {
+const KanbanBoard = ({paints, onAdd, onSubtract}) => {
 
-    const paints = props.paints;
+    // Filter lists based on swim lanes of availability
     const availablePaints = paints.filter(item => (item.status === 2));
     const lowPaints = paints.filter(item => (item.status === 1));
     const outPaints = paints.filter(item => (item.status === 0));
+
 
     return(
         <div className="ui container">
@@ -13,20 +15,24 @@ const KanbanBoard = (props) => {
 
             <div className="ui equal width center aligned padded grid">
                 <div className="ui column olive">
-                <Lane status={'2'}  paints={availablePaints}/>
-                
+                    <h2 className="ui horizontal divider header">Available</h2>
+                    <div className="ui cards">
+                        <PaintList paints={availablePaints} onAdd={onAdd} onSubtract={onSubtract} />
+                    </div>
                 </div>
                 <div className="ui column yellow">
-                <Lane status={'1'}  paints={lowPaints}/>
-                
-
+                    <h2 className="ui horizontal divider header">Low</h2>
+                    <div className="ui cards">
+                        <PaintList paints={lowPaints} onAdd={onAdd} onSubtract={onSubtract} />
+                    </div>
                 </div>
                 <div className="ui column orange">
-                <Lane status={'0'}  paints={outPaints}/>
-                
-
+                    <h2 className="ui horizontal divider header">Out</h2>
+                    <div className="ui cards">
+                        <PaintList paints={outPaints} onAdd={onAdd} onSubtract={onSubtract} />
+                    </div>
                 </div>
-            </div>
+            </div>      
         </div>
     );
 }

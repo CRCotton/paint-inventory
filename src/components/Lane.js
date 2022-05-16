@@ -15,6 +15,7 @@ const Lane = (props) => {
         }
     };
 
+    
     return(
         <>
         <h2 className="ui horizontal divider header">
